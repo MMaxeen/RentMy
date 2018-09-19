@@ -1,0 +1,569 @@
+@import "variables";
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: ghostwhite;
+  color: $green;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+nav{
+  position: fixed;
+  width: 10vw;
+  height: 100vh;
+  top: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: ghostwhite;
+}
+
+main{
+  position: absolute;
+  top: 0;
+  left: 10vw;
+  width: 90vw;
+}
+
+.icon-ry{
+  width: 10vw;
+  height: 10vh;
+}
+
+.text-content{
+  color: black;
+  margin: 15px;
+  padding: 10px;
+}
+
+
+#ski{
+  position: absolute;
+  right: 15vw;
+  top: 0vh;
+}
+
+#kayak{
+  position: absolute;
+  right: 0vw;
+  top: 0vh;
+}
+
+#tent{
+  position: absolute;
+  right: 15vw;
+  top: 20vh;
+}
+
+#surf{
+  position: absolute;
+  right: 0vw;
+  top: 20vh;
+}
+
+.icon-ski{
+  height: 35%;
+  width: 35%;
+}
+
+.icon-kayak{
+  height: 35%;
+  width: 35%;
+}
+
+.icon-tent{
+  height: 35%;
+  width: 35%;
+}
+
+.icon-surf{
+  height: 35%;
+  width: 35%;
+}
+
+
+#concept{
+  height: 40vh;
+  background-color: ghostwhite;
+  font-weight: 900;
+  font-size: 1.4em;
+}
+
+#choice{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  object-fit: cover;
+}
+
+.gif{
+  position: absolute;
+  z-index: -1;
+  border: none;
+}
+
+#action{
+  font-weight: 800;
+  font-size: 2em;
+  color: white;
+}
+
+#mountain{
+  //border-bottom: 2px solid grey;
+  //border-top: 2px solid grey;
+}
+
+#sea{
+  //border-bottom: 2px solid $green;
+}
+.sea, .mountain, .forest{
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 90vw;
+  object-fit: cover;
+}
+
+
+#resume{
+  background-color: ghostwhite;
+  color: grey;
+  font-weight: 800;
+  font-size: 1.6em;
+}
+
+#resume h2{
+  padding: 40px;
+  color: black;
+}
+
+.how{
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.tap{
+  color: $green;
+}
+
+.select{
+  color: grey;
+}
+
+.travel{
+  color: $pink;
+}
+
+.icon-tap, .icon-selection, .icon-traveler{
+  heigth: 10vh;
+  width: 10vw;
+}
+
+
+.icon-forest{
+  fill: wheat;
+}
+
+.icon-wave{
+  fill: #1C8A8B;
+}
+
+.icon-mountain{
+  fill: #2B395A;
+}
+
+#test{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100vh;
+  margin: 20px;
+  padding: 20px;
+}
+
+.gear{
+  display: flex;
+  height: 80%;
+  width: 45%;
+  border: 1px solid $green;
+}
+
+.gear img{
+  height: 100%;
+  width: 100%;
+}
+
+.map{
+  display: flex;
+  height: 80%;
+  width: 45%;
+  border: 1px solid $green;
+}
+
+.map img{
+  height: 100%;
+  width: 100%;
+}
+
+ul a{
+  transform: rotate(90deg);
+  text-decoration: none;
+  color: $green;
+  font-size: 1.4em;
+  font-weight: 900;
+  //transform-origin: left top 0;
+  &.active{
+    .wrapper-txt{
+        &:after{
+           clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%);
+        }
+    }
+  }
+}
+
+.wrapper-txt{
+ position: relative;
+ &:after{
+   position: absolute;
+   top: 0;
+   left: 0;
+     content: attr(data-text);
+     color: grey;
+     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+     transition: clip-path 0.6s ease-out;
+ }
+}
+
+
+.wrapper-toggle{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  transition: height 0.6s;
+  &.opened{
+      height: 25vh;
+  }
+}
+
+.test{
+  display: none;
+  color: $pink;
+  height: 100vh;
+  width: 90vw;
+}
+
+.text{
+  opacity: 0;
+}
+
+.btn {
+  position: absolute;
+  top: 27vh;
+  left: 1vw;
+  width: 12vw;
+  height: 5vh;
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid $green;
+  border-radius: 0.4em;
+  color: $green;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  font-weight: 400;
+  line-height: 1;
+  margin: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    color: white;
+    outline: 0;
+  }
+}
+
+.fourth {
+  border-color: $green;
+  color: $green;
+  background: {
+    image: linear-gradient(45deg,$green 50%, transparent 50%);
+    position: 100%;
+    size: 400%;
+  }
+  transition: background 600ms ease-in-out;
+  
+  &:hover {
+    background-position: 0;
+  }
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  font-weight: 900;
+  color: dodgerblue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 980px){
+
+  main{ 
+    position: absolute;
+    top: 0;
+    left: 20vw;
+    width: 80vw;
+  }
+  nav{
+    position: fixed;
+    width: 20vw;
+    height: 100vh;
+    top: 0;
+  }
+  
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: ghostwhite;
+    font-size: 0.4em;
+  }
+  
+
+  
+  .icon-ry{
+    width: 20%;
+    height: 20%;
+  }
+  
+  #concept{
+    height: 60vh;
+    font-size: 0.6em;
+  }
+
+  
+  #ski{
+    position: absolute;
+    right: 50vw;
+    top: 30vh;
+    height: 10vh;
+    width: 10vw;
+  }
+  
+  #kayak{
+    position: absolute;
+    right: 25vw;
+    top: 30vh;
+    height: 10vh;
+    width: 10vw;
+  }
+  
+  #tent{
+    position: absolute;
+    right: 50vw;
+    top: 40vh;
+    height: 10vh;
+    width: 10vw;
+  }
+  
+  #surf{
+    position: absolute;
+    right: 25vw;
+    top: 40vh;
+    height: 10vh;
+    width: 10vw;
+  }
+  
+  .icon-ski{
+    height: 100%;
+    width: 100%;
+  }
+  
+  .icon-kayak{
+    height: 100%;
+    width: 100%;
+  }
+  
+  .icon-tent{
+    height: 100%;
+    width: 100%;
+  }
+  
+  .icon-surf{
+    height: 100%;
+    width: 100%;
+  }
+   
+  
+  #choice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+  }
+  
+  #action{
+    font-weight: 800;
+    font-size: 0.8em;
+    color: white;
+  }
+
+  .sea, .mountain, .forest{
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 90vw;
+    object-fit: cover;
+  }
+
+  #resume{
+    background-color: ghostwhite;
+    color: grey;
+    font-weight: 800;
+    font-size: 0.8em;
+  }
+
+  
+  .how{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+  
+
+  
+  .icon-tap, .icon-selection, .icon-traveler{
+    heigth: 10vh;
+    width: 10vw;
+  }
+  
+  
+  #test{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .gear{
+    height: 40%;
+    width: 50%;
+    border: 1px solid $green;
+  }
+  
+  .gear img{
+    height: 100%;
+    width: 100%;
+  }
+  
+  .map{
+    height: 40%;
+    width: 50%;
+    border: 1px solid $green;
+  }
+  
+  .map img{
+    height: 100%;
+    width: 100%;
+  }
+  
+  ul a{
+    transform: rotate(90deg);
+    text-decoration: none;
+    color: $green;
+    font-size: 1.4em;
+    font-weight: 900;
+    //transform-origin: left top 0;
+    &.active{
+      .wrapper-txt{
+          &:after{
+             clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%);
+          }
+      }
+    }
+  }
+  
+
+  
+  .btn{
+    position: absolute;
+    top: 52vh;
+    left: 20vw;
+    width: 25vw;
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid $green;
+    border-radius: 0.6em;
+    color: $green;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font-size: 0.6em;
+    font-weight: 700;
+    line-height: 1;
+    margin: 15px;
+    padding: 0.6em 1em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+
+  
+    &:hover,
+    &:focus {
+      color: white;
+      outline: 0;
+    }
+  }
+
+  footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    font-weight: 900;
+    font-size: 0.6em;
+    color: dodgerblue;
+  }
+  
+}
+
