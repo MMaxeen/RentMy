@@ -55,7 +55,3 @@ $('.toggle').on('click', function(e){
         TweenMax.to($('.text'), 0.4, {opacity: 1});
     });
 });
-
-TweenMax.from(".icon-ry", 1.6, {opacity:0, x:-40});
-TweenMax.from(["#ski", "#kayak", "#tent", "#surf"], 1.6, {opacity:0, y:-400});
-
