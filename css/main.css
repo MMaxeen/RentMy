@@ -4,7 +4,7 @@
 
 body {
   background: ghostwhite;
-  color: #00FFBA;
+  color: #00B4CD;
   font-family: 'Josefin Sans', sans-serif; }
 
 nav {
@@ -111,6 +111,10 @@ main {
   font-size: 2em;
   color: white; }
 
+#mountain {
+  border-bottom: 2px solid grey;
+  border-top: 2px solid grey; }
+
 .sea, .mountain, .forest {
   position: absolute;
   z-index: -1;
@@ -142,7 +146,7 @@ main {
   text-align: center; }
 
 .tap {
-  color: #00FFBA; }
+  color: #00B4CD; }
 
 .select {
   color: grey; }
@@ -158,7 +162,7 @@ main {
   fill: wheat; }
 
 .icon-wave {
-  fill: #1C8A8B; }
+  fill: #00B4CD; }
 
 .icon-mountain {
   fill: #2B395A; }
@@ -183,7 +187,7 @@ main {
   display: flex;
   height: 80%;
   width: 45%;
-  border: 1px solid #00FFBA; }
+  border: 1px solid #00B4CD; }
 
 .gear img {
   height: 100%;
@@ -195,7 +199,7 @@ main {
   display: flex;
   height: 80%;
   width: 45%;
-  border: 1px solid #00FFBA; }
+  border: 1px solid #00B4CD; }
 
 .map img {
   height: 100%;
@@ -206,7 +210,7 @@ ul a {
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
   text-decoration: none;
-  color: #00FFBA;
+  color: #00B4CD;
   font-size: 1.4em;
   font-weight: 900; }
   ul a.active .wrapper-txt:after {
@@ -268,9 +272,9 @@ ul a {
   -moz-appearance: none;
   appearance: none;
   background-color: transparent;
-  border: 2px solid #00FFBA;
+  border: 2px solid #00B4CD;
   border-radius: 0.4em;
-  color: #00FFBA;
+  color: #00B4CD;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -293,11 +297,11 @@ ul a {
     outline: 0; }
 
 .fourth {
-  border-color: #00FFBA;
-  color: #00FFBA;
-  background-image: -webkit-linear-gradient(45deg, #00FFBA 50%, transparent 50%);
-  background-image: -o-linear-gradient(45deg, #00FFBA 50%, transparent 50%);
-  background-image: linear-gradient(45deg, #00FFBA 50%, transparent 50%);
+  border-color: #00B4CD;
+  color: #00B4CD;
+  background-image: -webkit-linear-gradient(45deg, #00B4CD 50%, transparent 50%);
+  background-image: -o-linear-gradient(45deg, #00B4CD 50%, transparent 50%);
+  background-image: linear-gradient(45deg, #00B4CD 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
   -webkit-transition: background 600ms ease-in-out;
@@ -450,14 +454,14 @@ footer {
   .gear {
     height: 40%;
     width: 50%;
-    border: 1px solid #00FFBA; }
+    border: 1px solid #00B4CD; }
   .gear img {
     height: 100%;
     width: 100%; }
   .map {
     height: 40%;
     width: 50%;
-    border: 1px solid #00FFBA; }
+    border: 1px solid #00B4CD; }
   .map img {
     height: 100%;
     width: 100%; }
@@ -466,7 +470,7 @@ footer {
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
     text-decoration: none;
-    color: #00FFBA;
+    color: #00B4CD;
     font-size: 1.4em;
     font-weight: 900; }
     ul a.active .wrapper-txt:after {
@@ -483,9 +487,9 @@ footer {
     -moz-appearance: none;
     appearance: none;
     background-color: transparent;
-    border: 2px solid #00FFBA;
+    border: 2px solid #00B4CD;
     border-radius: 0.6em;
-    color: #00FFBA;
+    color: #00B4CD;
     cursor: pointer;
     display: -webkit-box;
     display: -ms-flexbox;
